@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>BDAY wish</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/home.css">
+  </head>
+  <body>
+    <header class="header">
+         <h1 class = "heading">online birthday wish creation for your love ones</h1>
+    </header>
+  <div class = "container">
+    <form class="text-white" action="" method="post">
+      {% csrf_token %}
+      <label for="name">Who's birthday (full name):</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter the name of who's birthday you wanna wish "
+        required
+      /><br /><br />
+
+      <label for="email">birthday person email :</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter birthday person email"
+        required
+      /><br /><br />
+      
+      <label for="message">Enter the message for your bday wish</label>
+      <textarea id="w3review" name="w3review" rows="4" cols="50">Happy birthday! Celebrate with joy and loved ones. May this year bring blessings, happiness, and success. Embrace opportunities, pursue dreams, and remember you're loved. Enjoy every moment and have an amazing year ahead! 🎉🎂</textarea>
+      <br /><br />
+    
+
+      <label for="audio">Enter the audio u wanna be played at back(mp3)</label>
+      <p>default audio : <p>
+      <audio controls>
+      <source src="/static/hbd.mp3" type="audio/mpeg">
+      </audio>
+      <input
+        type="file"
+        id="music"
+        name="music"
+        placeholder="upload music"
+        accept=".mp3,audio/*"
+      /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    </div>
+  </body>
+</html>
