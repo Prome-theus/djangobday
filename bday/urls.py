@@ -5,6 +5,6 @@ from bday import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('main/',views.main,name='main'),
-    path('',views.Homepage,name='home')
+    path('',views.main,name='main'),
+    path('main/',views.Homepage,name='home')
 ]
